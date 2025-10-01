@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Menghubungkan vue ke html -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <title>Belajar vue</title>
+</head>
+<body>
+    <div id="app">
+        {{ message }}
+
+        <!-- <p>
+            {{ isItTrue}}
+        </p>
+        <p>
+            {{ myArray[1] }}
+        </p>
+        <p>
+            halo my name is {{ myObj.name }} my job is {{ myObj.job }}
+        </p>
+        <p>
+            {{ greeting }}
+        </p>
+        <p>
+            {{ myFunc }}
+        </p> -->
+    </div>
+</body>
+    <script>
+        // const { createApp } = Vue
+
+        // createApp ({
+        //     data() {
+        //         return {
+        //             message: 'Hello World',
+        //             isItTrue: false,
+        //             myArray: [
+        //                 'zaky',
+        //                 'abdullah',
+        //                 'tono'
+        //             ],
+        //             myObj: {
+        //                 name: 'Zaky',
+        //                 job: 'dev'
+        //             },
+        //             greeting: 'Today is' + new Date().toLocalString(),
+        //             myFunc:() => {
+        //                 return 'My name is Zaky'
+        //             }
+        //         }
+        //     }
+        // }).mount('#app')
+
+
+        // lebih ringkas dipanggil disini langsung
+        const App = {
+            data() {
+                return {
+                    message: 'Hello'
+                }
+            }
+        }
+        Vue.CreateApp(App).mount()
+    </script>
+</html>
