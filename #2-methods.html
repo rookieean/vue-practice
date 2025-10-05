@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Menghubungkan vue ke html -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <title>Belajar vue</title>
+</head>
+<body>
+    <div id="app">
+        {{ message }}
+
+        <p>
+            {{ myFunc() }}
+        </p>
+
+    </div>
+</body>
+    <script>
+
+        const App = {
+            data() {
+                return {
+                    message: 'Hello',
+                    isItTrue: true,
+                    myArray: [
+                        'my',
+                        'skill',
+                        'is',
+                        'awesome'
+                    ]
+                }
+            }, 
+            // contoh methods
+            methods: {
+                myFunc() {
+                    const randomArray = this.myArray[Math.floor[Math.random() * this.myArray.length]]
+
+                    if (this.isItTrue) {
+                        return this.myArray[3]
+                    }
+                    return randomArray
+                }
+            },
+        }
+        Vue.CreateApp(App).mount()
+
+    </script>
+</html>
