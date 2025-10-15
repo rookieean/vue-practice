@@ -10,7 +10,9 @@
 </head>
 <body>
   <div id="app">
+    // v-on sama dengan @click, @ udah mewakili v-on
     <button v-on:click="handleActive">Active</button>
+    // v-bind:href udah sama kyak :href, jadi titik dua udah mewakili v-bind
     <div v-bind:href="linkGoogle">
       go to google
     </div>
@@ -18,6 +20,8 @@
 </body>
 
 <script>
+  // shorthands: untuk menyingkat sebuah kode khusus untuk v-bind dan v-on
+  // 
   const App = {
     data () {
       return {

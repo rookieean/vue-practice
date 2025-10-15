@@ -23,6 +23,7 @@
 </body>
 
 <script>
+    // computed menyediakan yang method gak bisa, melengkapi kekurangan method
   const App = {
     data () {
       return {
@@ -30,6 +31,8 @@
         active: false
       }
     },
+    // akan menjalankan fungsi jika ada yang berubah
+    // salah satu berubah akan running
     computed: {
       compMessage() {
         console.log('computed Message')
