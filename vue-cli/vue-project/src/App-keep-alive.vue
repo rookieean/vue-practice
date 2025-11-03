@@ -19,6 +19,12 @@
             // dynamic component
             <component :is="activeComp"></component>
 
+
+            // keep alive
+            <keep-alive include="comp-orange">
+                <component :is="activeComp"></component>
+            </keep-alive>
+
         </div>
         <app-footer></app-footer>
     </div>
@@ -45,11 +51,9 @@ import compGrape from './components/grape.vue'
 </script>
 
 
-
-// gimna jika ada banyak component, pengen dibikin dynamic semua?
-// pakai dynamic component lalu tinggal panggil aja
-// gak perlu banyak baris, cukup baris penting biar code clean
-
+// keep alive -> biar state component tetap terjaga walaupun di hide
+// misal user isi form di component orange, terus pindah ke grape, terus balik lagi ke orange
+// nah formnya tetep keisi, gak ilang
 
 
 
